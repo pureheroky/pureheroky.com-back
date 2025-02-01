@@ -44,7 +44,7 @@ func main() {
 		log.Fatalf("Failed to connect to MongoDB: %v\n", err)
 	}
 
-	app.Static("/images", "../static/images")
+	app.Static("/images", "./static/images")
 
 	app.Use(cors.New(cors.Config{
 		AllowOrigins: "https://pureheroky.com, https://www.pureheroky.com",
