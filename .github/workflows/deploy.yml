@@ -21,7 +21,7 @@ jobs:
       - name: Build application
         run: |
           mkdir -p build
-          GOOS=linux GOARCH=amd64 go build -ldflags "-X main.version=${{ github.sha }}" -o build/app-${{ github.sha }} .
+          GOOS=linux GOARCH=amd64 go build -ldflags "-X main.version=${{ github.sha }}" -o build/app-${{ github.sha }} cmd/main.go
 
       - name: Upload binary to server
         uses: appleboy/scp-action@master
