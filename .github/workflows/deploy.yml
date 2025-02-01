@@ -2,7 +2,7 @@ name: Deploy
 permissions:
   contents: write
   issues: write
-  
+
 on:
   push:
     branches:
@@ -30,7 +30,7 @@ jobs:
         id: create_release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ github.sha }}
+          tag_name: v${{ github.sha }}
           name: "Release ${{ github.sha }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
