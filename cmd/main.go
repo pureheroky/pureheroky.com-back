@@ -47,7 +47,7 @@ func main() {
 	app.Static("/images", "../static/images")
 
 	app.Use(cors.New(cors.Config{
-		AllowOrigins: "https://pureheroky.com",
+		AllowOrigins: "https://pureheroky.com, https://www.pureheroky.com",
 		AllowHeaders: "Origin, Content-Type, Accept",
 		AllowMethods: "GET, POST, PUT, DELETE, OPTIONS",
 	}))
